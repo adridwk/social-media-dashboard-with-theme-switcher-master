@@ -1,0 +1,179 @@
+.card-light {
+  background-color: $color-card;
+
+  .summary__touch-total {
+    color: $color-text-dBlue;
+  }
+
+  &:hover {
+    background-color: $color-card-hover;
+  }
+}
+.card-dark {
+  background-color: $color-card-dark;
+
+  .summary__touch-total {
+    color: $color-text-white-dark;
+  }
+
+  &:hover {
+    background-color: $color-card-dark-hover;
+  }
+
+  .card__touch-total {
+    color: $color-text-white-dark;
+  }
+}
+
+.summary {
+  padding: 2rem;
+  display: flex;
+  height: 220px;
+  border-radius: 5px;
+  cursor: pointer;
+
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  justify-items: center;
+
+  position: relative;
+
+  &::after {
+    content: "";
+    border-radius: 8px 8px 0 0;
+    height: 6px;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+  }
+
+  &__heading {
+    display: flex;
+    justify-items: center;
+    align-items: center;
+
+    margin-bottom: 1rem;
+  }
+
+  .icon {
+    margin-right: 1rem;
+  }
+  &__touch-total {
+    font-size: 5rem;
+    font-weight: 700;
+  }
+
+  &__touch-type {
+    text-transform: uppercase;
+    font-size: 1.2rem;
+    letter-spacing: 3.5px;
+    margin-bottom: 1.5rem;
+  }
+
+  &__footer {
+    margin-top: 1.5rem;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-items: center;
+    align-items: center;
+  }
+}
+
+// top-border color for summary cards
+.fb-summary::after {
+  background-color: $color-facebook;
+}
+.tw-summary::after {
+  background-color: $color-twitter;
+}
+.insta-summary::after {
+  background-image: $color-instagram;
+}
+.ytube-summary::after {
+  background-color: $color-youTube;
+}
+// top-border color for summary cards
+.fb-summary {
+  grid-area: fbookMain;
+}
+.tw-summary {
+  grid-area: twitMain;
+}
+.insta-summary {
+  grid-area: instaMain;
+}
+.ytube-summary {
+  grid-area: ytubeMain;
+}
+
+.overview {
+  grid-area: overview;
+}
+
+.fb-card {
+  grid-area: fbViews;
+}
+//class styles for all cards
+
+.arrow-icon {
+  width: 0.7rem;
+  // height: 10px;
+}
+.total-up {
+  color: $color-limeGreen;
+}
+
+.total-down {
+  color: $color-brightRed;
+}
+
+.total-day {
+  margin-left: 0.3rem;
+  white-space: nowrap;
+  font-weight: 700;
+}
+//break-down card
+
+.card {
+  padding: 2.5rem 3rem;
+  display: grid;
+  border-radius: 5px;
+  cursor: pointer;
+
+  grid-template-rows: repeat(2, 1fr);
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+  justify-content: space-between;
+  grid-gap: 2rem;
+
+  &__description {
+    grid-column: 1 / 2;
+    grid-row: 1;
+    font-weight: 400;
+  }
+
+  &__icon {
+    grid-column: 2 / 3;
+    grid-row: 1;
+    justify-self: end;
+  }
+
+  &__touch-total {
+    grid-column: 1 / 2;
+    grid-row: 2;
+    font-size: 3rem;
+    color: $color-text-dBlue;
+    font-weight: 700;
+  }
+
+  &__stat {
+    grid-column: 2 / 3;
+    grid-row: 2;
+    justify-self: end;
+    display: flex;
+    align-items: center;
+  }
+}

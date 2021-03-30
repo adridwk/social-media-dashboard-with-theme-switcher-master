@@ -1,0 +1,51 @@
+h1,
+h2,
+h3 {
+  font-size: inherit;
+}
+
+h3 {
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+
+  //light mode
+  color: $color-text-blue;
+}
+.dark-mode {
+  color: $color-text-grey-dark;
+}
+
+.main-title {
+  font-size: 3rem;
+  color: $color-text-dBlue;
+}
+.dark-mode-title {
+  color: $color-text-white-dark;
+}
+.total-followers {
+  font-weight: 700;
+  font-size: 1.4rem;
+  text-indent: 0.5px;
+}
+
+.toggle-label {
+  color: $color-text-blue;
+  font-weight: 700;
+}
+
+.overview {
+  font-size: 2.5rem;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: $color-text-blue;
+}
