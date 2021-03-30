@@ -17,42 +17,43 @@ body {
   color: #1e202a; }
 
 .dark-mode {
-  width: 1440px;
-  height: 100vh;
-  margin: 0 auto;
   color: white;
   background-color: #1e202a; }
 
 .heading {
-  width: inherit;
-  height: 250px;
+  width: 98vw;
+  height: 200px;
   margin: 0 auto;
   background-color: #f5f7ff;
   border-radius: 0 0 18px 18px; }
 
 .heading-dark-mode {
-  width: inherit;
-  height: 250px;
-  margin: 0 auto;
-  background-color: #1f212e;
-  border-radius: 0 0 18px 18px; }
+  background-color: #1f212e; }
 
 .container {
-  transform: translateY(-80px);
+  transform: translateY(-70px);
   width: 80%;
-  margin: 3rem auto 0;
+  height: fit-content;
+  margin: 0 auto 0;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-template-areas: "fbookMain twitMain instaMain ytubeMain" "overview overview overview overview" "fbViews fbLikes instaLikes instaViews" "twitTweet twitLikes ytubeLikes ytubeViews";
-  grid-gap: 3rem; }
+  grid-gap: 2rem; }
 
 .overview {
   grid-area: overview; }
+
+.attribution {
+  transform: translateY(-50px); }
 
 h1,
 h2,
 h3 {
   font-size: inherit; }
+
+h3 {
+  font-size: 1.2rem;
+  font-weight: 700; }
 
 body {
   font-family: "Inter", sans-serif;
@@ -60,8 +61,6 @@ body {
   color: #63687e; }
 
 .dark-mode {
-  font-family: "Inter", sans-serif;
-  font-weight: 400;
   color: #8b97c6; }
 
 .main-title {
@@ -69,17 +68,12 @@ body {
   color: #1e202a; }
 
 .dark-mode-title {
-  font-size: 3rem;
   color: white; }
 
 .total-followers {
   font-weight: 700;
+  font-size: 1.4rem;
   text-indent: 0.5px; }
-
-.dark-mode-followers {
-  font-weight: 700;
-  text-indent: 0.5px;
-  color: #8b97c6; }
 
 .toggle-label {
   color: #63687e;
@@ -100,12 +94,14 @@ body {
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
-  align-items: center;
+  align-content: flex-start;
   justify-content: space-between; }
   .heading__title {
-    margin-top: 0;
+    margin-top: 3.2rem;
     padding-top: 0; }
   .heading__switch {
+    margin-top: 3.2rem;
+    height: 5rem;
     display: flex;
     align-items: center; }
     .heading__switch .toggle-label {
@@ -257,7 +253,7 @@ body {
   font-weight: 700; }
 
 .card {
-  padding: 2.5rem;
+  padding: 2.5rem 3rem;
   display: grid;
   border-radius: 5px;
   cursor: pointer;
@@ -265,7 +261,7 @@ body {
   grid-template-columns: repeat(2, 1fr);
   align-items: center;
   justify-content: space-between;
-  grid-gap: 2.2rem; }
+  grid-gap: 2rem; }
   .card__description {
     grid-column: 1 / 2;
     grid-row: 1;

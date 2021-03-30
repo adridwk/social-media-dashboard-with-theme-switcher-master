@@ -1,87 +1,219 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | [Challenge Name Here]</title>
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <title>Frontend Mentor | Social Media Dashboard</title>
+    <!-- Font  -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Style sheet -->
+    <link rel="stylesheet" href="/css/style.css" />
+  </head>
+  <body>
+    <div class="heading">
+      <div class="heading__title">
+        <h1 class="main-title">Social Media Dashboard</h1>
+        <p class="total-followers">Total Followers: 23,004</p>
+      </div>
+      <div class="heading__switch">
+        <p class="toggle-label">Dark Mode</p>
+        <label class="toggle-control">
+          <input type="checkbox" checked="checked" id="toggle" />
+          <span class="control"></span>
+        </label>
+      </div>
+    </div>
+    <main class="container">
+      <div class="summary fb-summary card-light">
+        <div class="summary__heading">
+          <img
+            src="/img/icon-facebook.svg"
+            alt="Facebook Icon"
+            class="fbook-icon icon"
+          />
+          <p class="fbook-address">@nathanf</p>
+        </div>
+        <p class="summary__touch-total">1987</p>
+        <p class="summary__touch-type">Followers</p>
+        <div class="summary__footer">
+          <img src="/img/icon-up.svg" alt="" class="arrow-icon icon-up" />
+          <p class="total-day total-up">12 Today</p>
+        </div>
+      </div>
+      <div class="summary tw-summary card-light">
+        <div class="summary__heading">
+          <img
+            src="/img/icon-twitter.svg"
+            alt="Twitter Icon"
+            class="tw-icon icon"
+          />
+          <p class="tw-address">@nathanf</p>
+        </div>
+        <p class="summary__touch-total">1044</p>
+        <p class="summary__touch-type">Followers</p>
+        <div class="summary__footer">
+          <img src="/img/icon-up.svg" alt="" class="arrow-icon icon-up" />
+          <p class="total-day total-up">99 Today</p>
+        </div>
+      </div>
+      <div class="summary insta-summary card-light">
+        <div class="summary__heading">
+          <img
+            src="/img/icon-instagram.svg"
+            alt="Instagram Icon"
+            class="insta-icon icon"
+          />
+          <p class="insta-address">@realnathanf</p>
+        </div>
+        <p class="summary__touch-total">11k</p>
+        <p class="summary__touch-type">Followers</p>
+        <div class="summary__footer">
+          <img src="/img/icon-up.svg" alt="" class="arrow-icon icon-up" />
+          <p class="total-day total-up">1099 Today</p>
+        </div>
+      </div>
+      <div class="summary ytube-summary card-light">
+        <div class="summary__heading">
+          <img
+            src="/img/icon-youtube.svg"
+            alt="Youtube Icon"
+            class="ytube-icon icon"
+          />
+          <p class="ytube-address">Nathan F.</p>
+        </div>
+        <p class="summary__touch-total">8239</p>
+        <p class="summary__touch-type">Subscribers</p>
+        <div class="summary__footer">
+          <img src="/img/icon-down.svg" alt="" class="arrow-icon icon-down" />
+          <p class="total-day total-down">144 Today</p>
+        </div>
+      </div>
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
-</head>
-<body>
+      <h2 class="overview">Overview - Today</h2>
 
-  Social Media Dashboard
-  Total Followers: 23,004
-
-  Dark Mode
-
-  
-
-  @nathanf
-  1987
-  Followers
-  12 Today
-
-  @nathanf
-  1044
-  Followers
-  99 Today
-
-  @realnathanf
-  11k
-  Followers
-  1099 Today
-
-  Nathan F.
-  8239
-  Subscribers
-  144 Today
-
-
-
-  Overview - Today
-
-  Page Views
-  87
-  3%
-
-  Likes
-  52
-  2%
-
-  Likes
-  5462
-  2257%
-
-  Profile Views
-  52k
-  1375%
-
-  Retweets
-  117
-  303%
-
-  Likes
-  507
-  553%
-
-  Likes
-  107
-  19%
-
-  Total Views
-  1407
-  12%
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
-</body>
+      <div class="card card-light">
+        <h3 class="card__description fb-card">Page Views</h3>
+        <img
+          src="/img/icon-facebook.svg"
+          alt="Facebook Icon"
+          class="fbook-icon icon card__icon"
+        />
+        <p class="card__touch-total">87</p>
+        <div class="card__stat">
+          <img src="/img/icon-up.svg" alt="" class="arrow-icon icon-up" />
+          <p class="total-day total-up">3%</p>
+        </div>
+      </div>
+      <div class="card card-light">
+        <h3 class="card__description fb-card">Likes</h3>
+        <img
+          src="/img/icon-facebook.svg"
+          alt="Facebook Icon"
+          class="fbook-icon icon card__icon"
+        />
+        <p class="card__touch-total">52</p>
+        <div class="card__stat">
+          <img src="/img/icon-down.svg" alt="" class="arrow-icon icon-down" />
+          <p class="total-day total-down">2%</p>
+        </div>
+      </div>
+      <div class="card card-light">
+        <h3 class="card__description insta-card">Likes</h3>
+        <img
+          src="/img/icon-instagram.svg"
+          alt="Instagram Icon"
+          class="insta-icon icon card__icon"
+        />
+        <p class="card__touch-total">5462</p>
+        <div class="card__stat">
+          <img src="/img/icon-up.svg" alt="" class="arrow-icon icon-up" />
+          <p class="total-day total-up">2257%</p>
+        </div>
+      </div>
+      <div class="card card-light">
+        <h3 class="card__description insta-card">Profile Views</h3>
+        <img
+          src="/img/icon-instagram.svg"
+          alt="Instagram Icon"
+          class="insta-icon icon card__icon"
+        />
+        <p class="card__touch-total">52k</p>
+        <div class="card__stat">
+          <img src="/img/icon-up.svg" alt="" class="arrow-icon icon-up" />
+          <p class="total-day total-up">1375%</p>
+        </div>
+      </div>
+      <div class="card card-light">
+        <h3 class="card__description tw-card">Retweets</h3>
+        <img
+          src="/img/icon-twitter.svg"
+          alt="Twitter Icon"
+          class="tw-icon icon card__icon"
+        />
+        <p class="card__touch-total">117</p>
+        <div class="card__stat">
+          <img src="/img/icon-up.svg" alt="" class="arrow-icon icon-up" />
+          <p class="total-day total-up">303%</p>
+        </div>
+      </div>
+      <div class="card card-light">
+        <h3 class="card__description tw-card">Likes</h3>
+        <img
+          src="/img/icon-twitter.svg"
+          alt="Twitter Icon"
+          class="tw-icon icon card__icon"
+        />
+        <p class="card__touch-total">507</p>
+        <div class="card__stat">
+          <img src="/img/icon-up.svg" alt="" class="arrow-icon icon-up" />
+          <p class="total-day total-up">553%</p>
+        </div>
+      </div>
+      <div class="card card-light">
+        <h3 class="card__description yt-card">Likes</h3>
+        <img
+          src="/img/icon-youtube.svg"
+          alt="Youtube Icon"
+          class="yt-icon icon card__icon"
+        />
+        <p class="card__touch-total">107</p>
+        <div class="card__stat">
+          <img src="/img/icon-down.svg" alt="" class="arrow-icon icon-down" />
+          <p class="total-day total-down">19%</p>
+        </div>
+      </div>
+      <div class="card card-light">
+        <h3 class="card__description yt-card">Total Views</h3>
+        <img
+          src="/img/icon-youtube.svg"
+          alt="Youtube Icon"
+          class="yt-icon icon card__icon"
+        />
+        <p class="card__touch-total">1407</p>
+        <div class="card__stat">
+          <img src="/img/icon-down.svg" alt="" class="arrow-icon icon-down" />
+          <p class="total-day total-down">12%</p>
+        </div>
+      </div>
+    </main>
+    <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="#">Adri de Wit-Kostecki</a>.
+    </div>
+    <script src="script.js"></script>
+  </body>
 </html>
