@@ -9,39 +9,55 @@
 html {
   box-sizing: border-box;
   font-size: 62.5%;
+
+  @media only screen and (max-width: 1200px) {
+    font-size: 50%;
+  }
 }
 
 body {
-  width: 1440px;
+  max-width: 1440px;
   height: 100vh;
   margin: 0 auto;
-  background-color: $color-bg;
-  color: $color-text-dBlue;
-}
-
-.dark-mode {
-  color: $color-text-white-dark;
+  color: $color-text-grey-dark;
   background-color: $color-bg-dark;
 }
-.heading {
-  width: 98vw;
+
+.dark-mode-off {
+  background-color: $color-bg;
+  color: $color-text-blue;
+}
+.background-top {
+  max-width: 1430px;
   height: 200px;
   margin: 0 auto;
-  background-color: $color-bgTop;
+  background-color: $color-bgTop-dark;
   border-radius: 0 0 18px 18px;
 }
-.heading-dark-mode {
-  background-color: $color-bgTop-dark;
+.background-top-dark-mode-off {
+  background-color: $color-bgTop;
 }
 .container {
-  transform: translateY(-70px);
-  width: 80%;
+  transform: translateY(-15rem);
+  max-width: 80%;
   height: fit-content;
   margin: 0 auto 0;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  grid-template-areas: "fbookMain twitMain instaMain ytubeMain" "overview overview overview overview" "fbViews fbLikes instaLikes instaViews" "twitTweet twitLikes ytubeLikes ytubeViews";
+  grid-template-areas: "heading heading heading heading" "fbookMain twitMain instaMain ytubeMain" "overview overview overview overview" "fbViews fbLikes instaLikes instaViews" "twitTweet twitLikes ytubeLikes ytubeViews";
   grid-gap: 2rem;
+
+  @media only screen and (max-width: 1200px) {
+    transform: translateY(-20rem);
+  }
+
+  @media only screen and (max-width: 800px) {
+    grid-template-areas: "heading heading heading heading" "fbookMain fbookMain twitMain twitMain" "instaMain instaMain ytubeMain ytubeMain" "overview overview overview overview" "fbViews fbViews fbLikes fbLikes" "instaLikes instaLikes instaViews instaViews" "twitTweet twitTweet twitLikes twitLikes" "ytubeLikes ytubeLikes ytubeViews ytubeViews";
+  }
+
+  @media only screen and (max-width: 500px) {
+    grid-template-areas: "heading heading heading heading" "fbookMain fbookMain fbookMain fbookMain" "twitMain twitMain twitMain twitMain" "instaMain instaMain instaMain instaMain" "ytubeMain ytubeMain ytubeMain ytubeMain" "overview overview overview overview" "fbViews fbViews fbViews fbViews" "fbLikes fbLikes fbLikes fbLikes" "instaLikes instaLikes instaLikes instaLikes" "instaViews instaViews instaViews instaViews" "twitTweet twitTweet twitTweet twitTweet" "twitLikes twitLikes twitLikes twitLikes" "ytubeLikes ytubeLikes ytubeLikes ytubeLikes" "ytubeViews ytubeViews ytubeViews ytubeViews";
+  }
 }
 
 .overview {
@@ -49,5 +65,5 @@ body {
 }
 
 .attribution {
-  transform: translateY(-50px);
+  transform: translateY(-13rem);
 }

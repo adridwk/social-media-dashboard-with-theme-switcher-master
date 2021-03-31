@@ -1,14 +1,3 @@
-.card-light {
-  background-color: $color-card;
-
-  .summary__touch-total {
-    color: $color-text-dBlue;
-  }
-
-  &:hover {
-    background-color: $color-card-hover;
-  }
-}
 .card-dark {
   background-color: $color-card-dark;
 
@@ -24,11 +13,26 @@
     color: $color-text-white-dark;
   }
 }
+.card-dark-off {
+  background-color: $color-card;
+
+  .summary__touch-total {
+    color: $color-text-dBlue;
+  }
+
+  &:hover {
+    background-color: $color-card-hover;
+  }
+
+  .card__touch-total {
+    color: $color-text-dBlue;
+  }
+}
 
 .summary {
   padding: 2rem;
   display: flex;
-  height: 220px;
+  height: 22rem;
   border-radius: 5px;
   cursor: pointer;
 
@@ -42,7 +46,7 @@
   &::after {
     content: "";
     border-radius: 8px 8px 0 0;
-    height: 6px;
+    height: 3px;
     left: 0;
     position: absolute;
     top: 0;
@@ -113,8 +117,29 @@
   grid-area: overview;
 }
 
-.fb-card {
+.fb-card-1 {
   grid-area: fbViews;
+}
+.fb-card-2 {
+  grid-area: fbLikes;
+}
+.insta-card-1 {
+  grid-area: instaLikes;
+}
+.insta-card-2 {
+  grid-area: instaViews;
+}
+.tw-card-1 {
+  grid-area: twitTweet;
+}
+.tw-card-2 {
+  grid-area: twitLikes;
+}
+.yt-card-1 {
+  grid-area: ytubeLikes;
+}
+.yt-card-2 {
+  grid-area: ytubeViews;
 }
 //class styles for all cards
 
@@ -131,6 +156,7 @@
 }
 
 .total-day {
+  font-size: 1.2rem;
   margin-left: 0.3rem;
   white-space: nowrap;
   font-weight: 700;

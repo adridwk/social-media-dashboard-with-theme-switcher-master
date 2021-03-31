@@ -4,28 +4,25 @@ h3 {
   font-size: inherit;
 }
 
+body {
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+}
+
 h3 {
   font-size: 1.2rem;
   font-weight: 700;
 }
-
-body {
-  font-family: "Inter", sans-serif;
-  font-weight: 400;
-
-  //light mode
-  color: $color-text-blue;
-}
-.dark-mode {
-  color: $color-text-grey-dark;
-}
-
 .main-title {
   font-size: 3rem;
-  color: $color-text-dBlue;
-}
-.dark-mode-title {
   color: $color-text-white-dark;
+
+  @media only screen and (max-width: 800px) {
+    font-size: 2.5rem;
+  }
+}
+.dark-mode-title-off {
+  color: $color-text-dBlue;
 }
 .total-followers {
   font-weight: 700;
@@ -34,12 +31,26 @@ body {
 }
 
 .toggle-label {
-  color: $color-text-blue;
   font-weight: 700;
+  font-size: 1.2rem;
+  color: $color-text-grey-dark;
+}
+
+.toggle-dark-mode-off {
+  color: $color-text-blue;
 }
 
 .overview {
   font-size: 2.5rem;
+  color: $color-text-white-dark;
+
+  @media only screen and (max-width: 800px) {
+    font-size: 2rem;
+  }
+}
+
+.overview-dark-mode-off {
+  color: $color-text-blue;
 }
 
 .attribution {
@@ -47,5 +58,9 @@ body {
   text-align: center;
 }
 .attribution a {
+  color: $color-text-grey-dark;
+}
+
+.attribution-dark-mode-off {
   color: $color-text-blue;
 }

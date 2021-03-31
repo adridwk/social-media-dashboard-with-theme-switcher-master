@@ -8,67 +8,78 @@
 html {
   box-sizing: border-box;
   font-size: 62.5%; }
+  @media only screen and (max-width: 1200px) {
+    html {
+      font-size: 50%; } }
 
 body {
-  width: 1440px;
+  max-width: 1440px;
   height: 100vh;
   margin: 0 auto;
-  background-color: white;
-  color: #1e202a; }
-
-.dark-mode {
-  color: white;
+  color: #8b97c6;
   background-color: #1e202a; }
 
-.heading {
-  width: 98vw;
+.dark-mode-off {
+  background-color: white;
+  color: #63687e; }
+
+.background-top {
+  max-width: 1430px;
   height: 200px;
   margin: 0 auto;
-  background-color: #f5f7ff;
+  background-color: #1f212e;
   border-radius: 0 0 18px 18px; }
 
-.heading-dark-mode {
-  background-color: #1f212e; }
+.background-top-dark-mode-off {
+  background-color: #f5f7ff; }
 
 .container {
-  transform: translateY(-70px);
-  width: 80%;
+  transform: translateY(-15rem);
+  max-width: 80%;
   height: fit-content;
   margin: 0 auto 0;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  grid-template-areas: "fbookMain twitMain instaMain ytubeMain" "overview overview overview overview" "fbViews fbLikes instaLikes instaViews" "twitTweet twitLikes ytubeLikes ytubeViews";
+  grid-template-areas: "heading heading heading heading" "fbookMain twitMain instaMain ytubeMain" "overview overview overview overview" "fbViews fbLikes instaLikes instaViews" "twitTweet twitLikes ytubeLikes ytubeViews";
   grid-gap: 2rem; }
+  @media only screen and (max-width: 1200px) {
+    .container {
+      transform: translateY(-20rem); } }
+  @media only screen and (max-width: 800px) {
+    .container {
+      grid-template-areas: "heading heading heading heading" "fbookMain fbookMain twitMain twitMain" "instaMain instaMain ytubeMain ytubeMain" "overview overview overview overview" "fbViews fbViews fbLikes fbLikes" "instaLikes instaLikes instaViews instaViews" "twitTweet twitTweet twitLikes twitLikes" "ytubeLikes ytubeLikes ytubeViews ytubeViews"; } }
+  @media only screen and (max-width: 500px) {
+    .container {
+      grid-template-areas: "heading heading heading heading" "fbookMain fbookMain fbookMain fbookMain" "twitMain twitMain twitMain twitMain" "instaMain instaMain instaMain instaMain" "ytubeMain ytubeMain ytubeMain ytubeMain" "overview overview overview overview" "fbViews fbViews fbViews fbViews" "fbLikes fbLikes fbLikes fbLikes" "instaLikes instaLikes instaLikes instaLikes" "instaViews instaViews instaViews instaViews" "twitTweet twitTweet twitTweet twitTweet" "twitLikes twitLikes twitLikes twitLikes" "ytubeLikes ytubeLikes ytubeLikes ytubeLikes" "ytubeViews ytubeViews ytubeViews ytubeViews"; } }
 
 .overview {
   grid-area: overview; }
 
 .attribution {
-  transform: translateY(-50px); }
+  transform: translateY(-13rem); }
 
 h1,
 h2,
 h3 {
   font-size: inherit; }
 
+body {
+  font-family: "Inter", sans-serif;
+  font-weight: 400; }
+
 h3 {
   font-size: 1.2rem;
   font-weight: 700; }
 
-body {
-  font-family: "Inter", sans-serif;
-  font-weight: 400;
-  color: #63687e; }
-
-.dark-mode {
-  color: #8b97c6; }
-
 .main-title {
   font-size: 3rem;
-  color: #1e202a; }
-
-.dark-mode-title {
   color: white; }
+  @media only screen and (max-width: 800px) {
+    .main-title {
+      font-size: 2.5rem; } }
+
+.dark-mode-title-off {
+  color: #1e202a; }
 
 .total-followers {
   font-weight: 700;
@@ -76,43 +87,73 @@ body {
   text-indent: 0.5px; }
 
 .toggle-label {
-  color: #63687e;
-  font-weight: 700; }
+  font-weight: 700;
+  font-size: 1.2rem;
+  color: #8b97c6; }
+
+.toggle-dark-mode-off {
+  color: #63687e; }
 
 .overview {
-  font-size: 2.5rem; }
+  font-size: 2.5rem;
+  color: white; }
+  @media only screen and (max-width: 800px) {
+    .overview {
+      font-size: 2rem; } }
+
+.overview-dark-mode-off {
+  color: #63687e; }
 
 .attribution {
   font-size: 11px;
   text-align: center; }
 
 .attribution a {
+  color: #8b97c6; }
+
+.attribution-dark-mode-off {
   color: #63687e; }
 
 .heading {
-  padding: 0 14.5rem 0;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  align-content: flex-start;
-  justify-content: space-between; }
+  grid-area: heading;
+  margin-bottom: 2rem;
+  display: grid;
+  grid-template-columns: minmax(max-content, 102.8rem) max-content;
+  grid-template-rows: min-content;
+  grid-template-areas: "heading switch";
+  justify-content: start;
+  align-items: center; }
   .heading__title {
-    margin-top: 3.2rem;
+    grid-area: heading;
     padding-top: 0; }
   .heading__switch {
-    margin-top: 3.2rem;
-    height: 5rem;
+    grid-area: switch;
+    justify-self: end;
     display: flex;
     align-items: center; }
     .heading__switch .toggle-label {
       margin-right: 1rem; }
     .heading__switch .toggle-control {
       margin-bottom: 2.5rem; }
+  @media only screen and (max-width: 560px) {
+    .heading {
+      grid-template-columns: minmax(max-content, 102.8rem) max-content;
+      grid-template-rows: min-content;
+      grid-gap: 1.5rem;
+      grid-template-areas: "heading heading" "switch switch"; }
+      .heading__title {
+        padding-bottom: 1.5rem;
+        border-bottom: 1px solid #8b97c6; }
+      .heading .heading-title-dark-mode-off {
+        border-bottom: 1px solid #63687e; }
+      .heading__switch {
+        justify-self: stretch;
+        justify-content: space-between; } }
 
 .toggle-control {
   display: block;
   position: relative;
-  padding-left: 50px;
+  padding-left: 5rem;
   margin-bottom: 6px;
   cursor: pointer;
   font-size: 22px;
@@ -124,38 +165,31 @@ body {
     height: 0;
     width: 0; }
   .toggle-control input:checked ~ .control {
-    background-image: linear-gradient(to left, #aeb3cb, #aeb3cb); }
+    background-image: linear-gradient(to right, #378fe6, #3eda82); }
     .toggle-control input:checked ~ .control:after {
-      background: white;
-      left: 28px; }
+      background: #1e202a;
+      right: 2.8rem; }
   .toggle-control input:hover ~ .control {
     background-image: linear-gradient(to right, #378fe6, #3eda82); }
   .toggle-control .control {
     position: absolute;
     top: 0;
     left: 0;
-    height: 25px;
-    width: 50px;
-    border-radius: 12.5px;
-    background-image: linear-gradient(to right, #378fe6, #3eda82);
+    height: 2.5rem;
+    width: 5rem;
+    border-radius: 1.25rem;
+    background-image: linear-gradient(to left, #aeb3cb, #aeb3cb);
     transition: background-color 0.15s ease-in; }
     .toggle-control .control:after {
       content: "";
       position: absolute;
-      left: 3px;
-      top: 3px;
-      width: 19px;
-      height: 19px;
-      border-radius: 12.5px;
-      background: #1e202a;
-      transition: left 0.15s ease-in; }
-
-.card-light {
-  background-color: #f0f2fa; }
-  .card-light .summary__touch-total {
-    color: #1e202a; }
-  .card-light:hover {
-    background-color: #dfe4f7; }
+      right: 0.3rem;
+      top: 0.3rem;
+      width: 1.9rem;
+      height: 1.9rem;
+      border-radius: 1.25rem;
+      background: white;
+      transition: right 0.15s ease-in; }
 
 .card-dark {
   background-color: #252a41; }
@@ -166,10 +200,19 @@ body {
   .card-dark .card__touch-total {
     color: white; }
 
+.card-dark-off {
+  background-color: #f0f2fa; }
+  .card-dark-off .summary__touch-total {
+    color: #1e202a; }
+  .card-dark-off:hover {
+    background-color: #dfe4f7; }
+  .card-dark-off .card__touch-total {
+    color: #1e202a; }
+
 .summary {
   padding: 2rem;
   display: flex;
-  height: 220px;
+  height: 22rem;
   border-radius: 5px;
   cursor: pointer;
   flex-direction: column;
@@ -180,7 +223,7 @@ body {
   .summary::after {
     content: "";
     border-radius: 8px 8px 0 0;
-    height: 6px;
+    height: 3px;
     left: 0;
     position: absolute;
     top: 0;
@@ -235,8 +278,29 @@ body {
 .overview {
   grid-area: overview; }
 
-.fb-card {
+.fb-card-1 {
   grid-area: fbViews; }
+
+.fb-card-2 {
+  grid-area: fbLikes; }
+
+.insta-card-1 {
+  grid-area: instaLikes; }
+
+.insta-card-2 {
+  grid-area: instaViews; }
+
+.tw-card-1 {
+  grid-area: twitTweet; }
+
+.tw-card-2 {
+  grid-area: twitLikes; }
+
+.yt-card-1 {
+  grid-area: ytubeLikes; }
+
+.yt-card-2 {
+  grid-area: ytubeViews; }
 
 .arrow-icon {
   width: 0.7rem; }
@@ -248,6 +312,7 @@ body {
   color: #dc414c; }
 
 .total-day {
+  font-size: 1.2rem;
   margin-left: 0.3rem;
   white-space: nowrap;
   font-weight: 700; }

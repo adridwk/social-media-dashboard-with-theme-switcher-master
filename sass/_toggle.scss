@@ -16,11 +16,11 @@
   }
 
   input:checked ~ .control {
-    background-image: $toggle-background-color-off;
+    background-image: $toggle-background-color-on;
 
     &:after {
-      background: $toggle-control-color;
-      left: $toggle-width - $toggle-control-size - $toggle-gutter;
+      background: $toggle-control-color-dark;
+      right: $toggle-width - $toggle-control-size - $toggle-gutter;
     }
   }
 
@@ -35,19 +35,19 @@
     height: $toggle-height;
     width: $toggle-width;
     border-radius: $toggle-radius;
-    background-image: $toggle-background-color-on;
+    background-image: $toggle-background-color-off;
     transition: background-color $toggle-control-speed $toggle-control-ease;
 
     &:after {
       content: "";
       position: absolute;
-      left: $toggle-gutter;
+      right: $toggle-gutter;
       top: $toggle-gutter;
       width: $toggle-control-size;
       height: $toggle-control-size;
       border-radius: $toggle-radius;
-      background: $toggle-control-color-dark;
-      transition: left $toggle-control-speed $toggle-control-ease;
+      background: $toggle-control-color;
+      transition: right $toggle-control-speed $toggle-control-ease;
     }
   }
 }
